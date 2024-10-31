@@ -1,0 +1,208 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #F5F5F5;
+  color: #333333;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #FFD700;
+  color: #333333;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  animation: fadeIn 1s ease;
+}
+
+header p {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.hamburger {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #333333;
+  cursor: pointer;
+  display: none;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: #333333;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover {
+  color: #FFD700;
+  transform: scale(1.1);
+}
+
+#navMenu.active {
+  display: block;
+}
+
+main {
+  margin-top: 6rem;
+  padding: 1rem;
+  padding-bottom: 5rem;
+}
+
+section {
+  background-color: #FFFFFF;
+  padding: 2rem;
+  margin: 2rem auto;
+  border: 1px solid #E0E0E0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  transition: transform 0.3s;
+}
+
+section:hover {
+  transform: translateY(-5px);
+}
+
+h2 {
+  color: #FFD700;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 1rem;
+}
+
+ul li {
+  margin: 0.5rem 0;
+  line-height: 1.6;
+}
+
+footer {
+  background-color: #FFD700;
+  color: #333333;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.social-icons a {
+  font-size: 1.5rem;
+  color: #333333;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #FFFFFF;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  header p {
+    font-size: 0.9rem;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    background-color: #FFD700;
+    padding: 1rem;
+    position: absolute;
+    width: 100%;
+    left: 0;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  #navMenu.active ul {
+    display: flex;
+  }
+
+  main {
+    margin-top: 6rem;
+    padding: 1rem;
+    padding-bottom: 5rem;
+  }
+
+  section {
+    padding: 1.5rem;
+  }
+}
+.header-container h1 {
+  margin-bottom: 1.5rem; /* Adds more space between the name and the navigation bar */
+}
+
+nav {
+  margin-top: 0.5rem; /* Slightly move the nav down */
+}
+.profile-photo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.profile-photo img {
+  width: 150px;  /* A decent size for a profile image */
+  height: 150px;
+  border-radius: 50%;  /* Circular photo */
+  object-fit: cover;
+  border: 3px solid #FFD700;  /* Matches the yellow theme */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
